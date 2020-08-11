@@ -1,0 +1,32 @@
+---
+title: "Pitch Course Project"
+author: "Mateopr"
+date: "8/11/2020"
+output: ioslides_presentation
+---
+
+## Overview
+
+This presentation is part of the Developing Data Products Course Project.
+The app created plots the women weight-height data set, which contains the height and weight in the USA. In the app you can calculate the weight from the height based on the lineal model obtained from the data set
+
+## Plot code
+
+```{r plot, fig.show="hide"}
+library(ggplot2)
+ g <- ggplot(women,aes(height,weight), xlab = "Height[inches]",
+             ylab = "Weight[lbs]") + 
+            geom_point(aes(size=2))+
+            geom_smooth(method="lm")
+        g
+```
+## Plot
+
+```{r ref.label="plot", echo=F}
+```
+
+## Links
+
+[App on shinyapps.io](https://mateopr.shinyapps.io/course_project/)
+
+[Repository on GitHub](https://github.com/mateopastur/Data-Product)
